@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/PC/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.1213768115942029" />
+        <entry key="..\:/Users/PC/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.17806484295845998" />
+        <entry key="..\:/mini_project/sweet/app/src/main/res/layout/activity_main.xml" value="0.1762917933130699" />
+        <entry key="..\:/mini_project/sweet/app/src/main/res/layout/adapter_delite.xml" value="0.17806484295845998" />
+        <entry key="..\:/mini_project/sweet/app/src/main/res/layout/custom_edit_text.xml" value="0.25" />
+        <entry key="..\:/mini_project/sweet/app/src/main/res/layout/custom_spinner.xml" value="0.17806484295845998" />
+        <entry key="..\:/mini_project/sweet/app/src/main/res/layout/prise_product.xml" value="0.17806484295845998" />
+        <entry key="..\:/mini_project/sweet/app/src/main/res/layout/product_recycler.xml" value="0.17806484295845998" />
+        <entry key="..\:/mini_project/sweet/app/src/main/res/layout/spiner_adapter.xml" value="0.17806484295845998" />
+        <entry key="..\:/mini_project/sweet/app/src/main/res/layout/spiner_adapter_two.xml" value="0.17806484295845998" />
+        <entry key="..\:/mini_project/sweet/app/src/main/res/layout/spinner_adapter.xml" value="0.17806484295845998" />
+        <entry key="..\:/mini_project/sweet/app/src/main/res/layout/spinner_adapter_one.xml" value="0.17806484295845998" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

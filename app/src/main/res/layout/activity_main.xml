@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/nameProduct"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:background="#1E7FD9"
+        android:gravity="center"
+        android:hint="название"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/numberGrams"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_below="@+id/nameProduct"
+        android:background="#1E7FD9"
+        android:gravity="center"
+        android:hint="количество грамм в упаковке"
+        android:inputType="number"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/prise"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_below="@+id/numberGrams"
+        android:background="#1E7FD9"
+        android:gravity="center"
+        android:hint="цена за упаковку"
+        android:inputType="number"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prise"
+        >
+
+        <ImageButton
+            android:id="@+id/buttonGram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_button_gram"
+            android:onClick="onButtonGram" />
+
+        <TextView
+            android:id="@+id/tevi"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:layout_below="@+id/buttonGram"
+            android:background="#A3BED8"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/main_recycler" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/main_product"
+            android:onClick="onButtonPrise"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
