@@ -1,6 +1,8 @@
 package com.example.sweet;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,13 +12,15 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.sweet.adapters.Adapter;
 import com.example.sweet.base.Manager;
 
 public class MainActivity extends AppCompatActivity {
-    EditText numberGrams, prise;
-    TextView nameProduct;
-    TextView tevi;
-    Manager manager;
+    private EditText numberGrams, prise;
+    private TextView nameProduct;
+    private TextView tevi;
+    private Manager manager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
         tevi = findViewById(R.id.tevi);
         nameProduct = findViewById(R.id.nameProduct);
         manager = new Manager(this);
+
+
     }
+
 
     @Override
     protected void onResume() {
@@ -54,9 +61,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onButtonRecycler(View view) {
+        Intent intent=new Intent(this, ProductRecyclerActivity.class);
+        startActivity(intent);
+
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         manager.closeDb();
     }
+
+
 }

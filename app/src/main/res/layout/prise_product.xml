@@ -6,19 +6,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PriseProductActivity">
+    tools:context=".PriseProductActivity"
+>
     <ImageView
         android:id="@+id/id1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="45dp"
+        android:layout_height="55dp"
         android:background="@drawable/image1"
+        android:layout_marginStart="70dp"
+
         />
     <ImageView
+        android:id="@+id/id11"
+        android:layout_width="45dp"
+        android:layout_height="55dp"
+        android:background="@drawable/image1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="70dp"
+        />
+
+    <TextView
         android:id="@+id/id2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/image2"
+        android:layout_width="200dp"
+        android:layout_height="64dp"
+        android:background="#144879"
         android:layout_below="@+id/id1"
+        android:text="выберите продукт"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/id22"
+        android:layout_width="200dp"
+        android:layout_height="64dp"
+        android:background="#144879"
+        android:layout_below="@+id/id1"
+        android:layout_alignParentEnd="true"
+        android:text="сколько грамм в рецепте"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="center"
         />
 
 
@@ -41,10 +69,11 @@
         android:textSize="25sp" />
 
     <ScrollView
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="300dp"
         android:layout_below="@+id/editGram"
         android:orientation="vertical">
+
         <LinearLayout
             android:id="@+id/rel2"
             android:layout_width="match_parent"
@@ -55,11 +84,10 @@
     </ScrollView>
 
     <ScrollView
-        android:layout_width="50dp"
+        android:layout_width="200dp"
         android:layout_height="300dp"
         android:layout_below="@+id/editGram"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/spinner"
         android:orientation="vertical">
 
         <LinearLayout
@@ -73,8 +101,12 @@
 
 
 
-
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        >
         <ImageButton
             android:id="@+id/addSpinner"
             android:layout_width="wrap_content"
@@ -83,29 +115,40 @@
             android:background="@drawable/image5"
             android:layout_alignParentBottom = "true"
             android:onClick="onButtonAddSpinner"
+            android:layout_marginEnd="10dp"
             />
 
-        <ImageButton
+        <Button
             android:id="@+id/id3"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_above="@id/textViewResult"
-            android:layout_toLeftOf="@+id/addSpinner"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/image6"
-            android:onClick="onButtonPriseTwo" />
+            android:layout_alignEnd="@+id/textViewResult"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#144879"
+            android:onClick="onButtonPriseTwo"
+            android:text="цена порции"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/textViewResult"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/addSpinner"
-        android:background="#A3BED8"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:layout_marginEnd="30dp"
-        android:textSize="30sp" />
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/addSpinner"
+            android:background="#9BCFFF"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginEnd="30dp"
+            android:textSize="30sp"
+            android:layout_marginStart="10dp"
+/>
+
+    </RelativeLayout>
+
+
 
 
 </RelativeLayout>

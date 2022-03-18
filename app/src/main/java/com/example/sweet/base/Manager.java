@@ -30,6 +30,13 @@ public class Manager {
         db.insert(Constants.TABLE_NAME, null, contentValues);
     }
 
+    public void delete(int id){
+
+        String selection  = Constants.ID + "=" + id;
+        db.delete(Constants.TABLE_NAME, selection, null);
+
+    }
+
 
 
     public List<String> readBaseName(){
@@ -46,8 +53,8 @@ public class Manager {
         return tempList;
     }
 
-    public /*здесь должен быть просто List*/ArrayList<Double> readBaseGram(){
-        /*здесь должен быть просто List*/ArrayList<Double> tempList = new ArrayList<>();
+    public ArrayList<Double> readBaseGram(){
+        ArrayList<Double> tempList = new ArrayList<>();
         openBase();
         Cursor cursor = db.query(Constants.TABLE_NAME, null, null,
                 null, null, null, null);

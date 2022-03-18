@@ -11,32 +11,36 @@
         android:id="@+id/nameProduct"
         android:layout_width="match_parent"
         android:layout_height="80sp"
-        android:background="#1E7FD9"
+        android:background="#9BCFFF"
         android:gravity="center"
         android:hint="название"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:layout_marginBottom="15dp"/>
 
     <EditText
         android:id="@+id/numberGrams"
         android:layout_width="match_parent"
         android:layout_height="80sp"
         android:layout_below="@+id/nameProduct"
-        android:background="#1E7FD9"
+        android:background="#9BCFFF"
         android:gravity="center"
         android:hint="количество грамм в упаковке"
         android:inputType="number"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:layout_marginBottom="15dp"/>
 
     <EditText
         android:id="@+id/prise"
         android:layout_width="match_parent"
         android:layout_height="80sp"
         android:layout_below="@+id/numberGrams"
-        android:background="#1E7FD9"
+        android:background="#9BCFFF"
         android:gravity="center"
         android:hint="цена за упаковку"
         android:inputType="number"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:layout_marginBottom="15dp"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -44,19 +48,24 @@
         android:layout_below="@+id/prise"
         >
 
-        <ImageButton
+        <Button
             android:id="@+id/buttonGram"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/main_button_gram"
-            android:onClick="onButtonGram" />
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#144879"
+            android:onClick="onButtonGram"
+            android:text="цена за грамм"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tevi"
             android:layout_width="match_parent"
             android:layout_height="101dp"
             android:layout_below="@+id/buttonGram"
-            android:background="#A3BED8"
+            android:background="#9BCFFF"
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="40sp" />
@@ -65,7 +74,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/main_recycler" />
+            android:background="@drawable/main_recycler"
+            android:onClick="onButtonRecycler"/>
 
         <ImageButton
             android:layout_width="wrap_content"

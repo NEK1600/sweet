@@ -11,7 +11,8 @@
         android:theme="@style/Theme.Sweet">
         <activity
             android:name=".PriseProductActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".ProductRecyclerActivity"
             android:exported="false" />
