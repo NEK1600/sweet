@@ -47,11 +47,31 @@ public class Manager {
         while (cursor.moveToNext()){
             String name = cursor.getString(cursor.getColumnIndexOrThrow
                     (Constants.NAME));
+
             tempList.add(name);
         }
         cursor.close();
         return tempList;
     }
+
+
+    public ArrayList<Integer> readBaseId(){
+
+        ArrayList<Integer> tempList2 = new ArrayList<>();
+        openBase();
+        Cursor cursor = db.query(Constants.TABLE_NAME, null, null,
+                null, null, null, null);
+        while (cursor.moveToNext()){
+            Integer id = cursor.getInt(cursor.getColumnIndexOrThrow
+                    (Constants.ID));
+            tempList2.add(id);
+
+        }
+        cursor.close();
+        return tempList2;
+    }
+
+
 
     public ArrayList<Double> readBaseGram(){
         ArrayList<Double> tempList = new ArrayList<>();

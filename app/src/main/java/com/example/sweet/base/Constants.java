@@ -6,7 +6,7 @@ public final class Constants {
     public static final String NAME = "name";
     public static final String GRAM = "gram";
 
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 3;
     public static final String DATABASE_NAME = "DbDayProduct.db";
 
     public static final String TABLE_STRUCTURE = "CREATE TABLE " + TABLE_NAME + " (" +

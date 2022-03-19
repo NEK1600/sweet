@@ -18,9 +18,12 @@ import java.util.List;
 public class Adapter extends RecyclerView.Adapter<Adapter.Adapter2> {
     private Context context;
     private List<String> listAdapter;
+    ArrayList<Integer> listId;
+
     public Adapter(Context context){
         this.context = context;
         listAdapter = new ArrayList<>();
+        listId = new ArrayList<>();
     }
 
     @NonNull
@@ -52,14 +55,21 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Adapter2> {
         }
     }
 
-    public void update(List<String> list2){
+    public void update(List<String> list2, List<Double> list3){
         listAdapter.clear();
         listAdapter.addAll(list2);
         notifyDataSetChanged();
     }
 
+
     public void remove(int pos, Manager manager){
-        //manager.delete(listAdapter.get(pos).getId());
+
+        listId = manager.readBaseId();
+        Integer integer = listId.get(pos);
+        manager.delete(integer);
+        listAdapter.remove(pos);
+        notifyItemRangeChanged(0, listAdapter.size());
+        notifyItemRemoved(pos);
     }
 
 }

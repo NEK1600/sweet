@@ -29,7 +29,8 @@ public class ProductRecyclerActivity extends AppCompatActivity {
         rc.setLayoutManager(new LinearLayoutManager(this));
         rc.setAdapter(adapter);
 
-        //getItemHelper().attachToRecyclerView();
+        getItemHelper().attachToRecyclerView(rc);
+
     }
 
     @Override
@@ -37,7 +38,7 @@ public class ProductRecyclerActivity extends AppCompatActivity {
         super.onResume();
         manager.openBase();
 
-        adapter.update(manager.readBaseName());
+        adapter.update(manager.readBaseName(), manager.readBaseGram());
     }
 
 
@@ -56,8 +57,10 @@ public class ProductRecyclerActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-                Log.d("MyLog", "logD");
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder,
+                                 int direction) {
+                    adapter.remove(viewHolder.getAdapterPosition(), manager);
+
             }
         });
     }
